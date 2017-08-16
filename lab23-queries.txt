@@ -1,0 +1,78 @@
+LAB 23 -- NORTHWIND SQL QUERIES
+
+1)
+
+select * from customers
+
+2)
+
+select distinct country from customers
+
+3)
+
+select * from customers
+where customerid like '%BL%'
+
+4)
+
+select * from orders
+limit 100
+
+5)
+
+select * from customers
+where postalcode in ('1010', '3012', '12209', '05023')
+
+6)
+
+select * from orders
+where shipregion is not null
+
+7)
+
+select * from customers
+order by country, city
+
+8)
+
+insert into customers (customerid, companyname)
+values ('QL', 'Quicken Loans')
+
+9)
+
+update orders
+set shipregion='EuroZone'
+where shipcountry='France'
+
+10)
+
+delete from order_details
+where quantity=1
+
+11)
+
+select avg(quantity), max(quantity), min(quantity) from order_details
+
+12)
+
+select avg(quantity), max(quantity), min(quantity) from order_details
+group by orderid
+
+13)
+
+select customerid from orders
+where orderid=10290
+
+14)
+
+inner join, left join, right join
+
+15)
+
+select * from employees
+where reportsto is null
+
+16)
+
+select * from employees
+where reportsto=2
